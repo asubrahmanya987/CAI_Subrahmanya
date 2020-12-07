@@ -15,11 +15,14 @@ import com.relevantcodes.extentreports.LogStatus;
 public class RegistrationTest extends BaseTest implements AutoConstant
 {
 	String exp="Thank you for registering with SAP Conversational AI" ;
-	@Test(dataProvider="regdata")
 	
-	public void registration(String fn,String ln,String email,String pwd,String repwd) throws InterruptedException
+	//Method used to verify the Registration feature by entering valid values
+	@Test(dataProvider="regdata")
+	public void registrationPositiveTest(String fn,String ln,String email,String pwd,String repwd) throws InterruptedException
 	{
+		
 		try {
+			
 			RegistrationPage rp = new RegistrationPage(driver);
 			
 			
@@ -52,6 +55,7 @@ public class RegistrationTest extends BaseTest implements AutoConstant
 		
 			
 	}
+		//This method allows us to pass the multiple values to a single test in single execution using TestNG Dataprovider annotation
 		@DataProvider(name="regdata")
 		public String[][] getRegData() throws Exception
 		{

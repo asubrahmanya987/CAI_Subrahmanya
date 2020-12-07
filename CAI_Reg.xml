@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="CAI_Tests">
+<test name="CAI_RegistrationTest">
+
+<classes>
+<class name="RegistrationTest"/>
+</classes>
+
+</test>
+
+</suite>

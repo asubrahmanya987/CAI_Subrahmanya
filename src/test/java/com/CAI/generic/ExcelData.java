@@ -19,7 +19,7 @@ public class ExcelData
 	public static  FileInputStream fi;
 	public static XSSFSheet sheet;
 	
-	
+	//Method used to read the data from the excel file.
 public static String getData(String path,int rowno,int columnno) throws IOException 
 {
 	fi = new FileInputStream(path);
@@ -30,7 +30,7 @@ public static String getData(String path,int rowno,int columnno) throws IOExcept
 	return data;
 	
 }
-
+	//Method used to get the row size
 public static int getRowSize(String path) throws IOException
 {
 	fi = new FileInputStream(path); 
@@ -39,6 +39,8 @@ public static int getRowSize(String path) throws IOException
 	return rowsize;
 	
 }
+
+	//Method used to get the column size
 public static int columnSize(String path,int rowno) throws Exception
 {
 	fi = new FileInputStream(path); 

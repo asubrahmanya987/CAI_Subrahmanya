@@ -16,6 +16,7 @@ public class BaseTest implements AutoConstant
 	public ExtentReports reports;
 	public ExtentTest etest;
 	
+	//Creating the Extent report object and starting extent report test
 	@BeforeClass
 	public void startReport()
 	{
@@ -26,7 +27,7 @@ public class BaseTest implements AutoConstant
 		
 	}
 	
-	
+	//Launching the browser and maximize the window
 	@BeforeMethod
 	public void openBrowser()
 	{
@@ -36,12 +37,15 @@ public class BaseTest implements AutoConstant
 		driver.manage().window().maximize();
 	}
 	
+	//Closing the browser
 	@AfterMethod
 	public void closeBrowser()
 	{
 		driver.close();
 		
 	}
+	
+	//End the extent report test
 	@AfterClass
 	public void  endreport() 
 	{

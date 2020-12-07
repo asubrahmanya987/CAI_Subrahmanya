@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GenericUtils
 {
-	
+
+	//Method used to switch to the frame by using ID
 	public static void switchToFrame(WebDriver ldriver,String id,int time) 
 	{	
 
@@ -18,6 +19,7 @@ public class GenericUtils
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(id));
 	}
 	
+	//Method used to calling the explicit wait conditions
 	public static void explcitWait(WebDriver ldriver,WebElement ele, String action,int time )
 	{
 		WebDriverWait wait=new WebDriverWait(ldriver, time);
