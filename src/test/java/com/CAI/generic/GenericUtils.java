@@ -19,7 +19,7 @@ public class GenericUtils
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(id));
 	}
 	
-	//Method used to calling the explicit wait conditions
+	//Method used to tell the webdriver to wait for a certain conditions.
 	public static void explcitWait(WebDriver ldriver,WebElement ele, String action,int time )
 	{
 		WebDriverWait wait=new WebDriverWait(ldriver, time);

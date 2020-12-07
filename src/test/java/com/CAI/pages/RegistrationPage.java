@@ -13,7 +13,7 @@ import junit.framework.Assert;
 
 public class RegistrationPage 
 {
-	
+	//Initialize the webelements using @FindBy annotation
 	public WebDriver ldriver;
 	@FindBy(xpath="//h1[contains(@id,'ids-heading-1')]")
 	private WebElement regwindow;
@@ -41,7 +41,7 @@ public class RegistrationPage
 	private WebElement regstatus;
 	
 	
-	
+	//Creating the object repository by calling the pagefactory.init element method
 	public RegistrationPage(WebDriver driver)
 	{
 		this.ldriver=driver;
@@ -49,6 +49,7 @@ public class RegistrationPage
 		
 	}
 	
+	//Clicking the cookie banner and sigh up button
 	public void Registrationclick() throws InterruptedException
 	{
 		ok.click();
@@ -57,16 +58,19 @@ public class RegistrationPage
 	
 	}
 	
+	//set the Firstname value
 	public void EnterFirstname(String fname)
 	{
 		GenericUtils.explcitWait(ldriver, regwindow, "visibility", 60);
 		firstname.sendKeys(fname);	
 	}
+	//set the last name value
 	public void EnterLastname(String lname)
 	{
 		lastname.sendKeys(lname);
 		
 	}
+	//set the email
 	public void EnterEmail(String Email) 
 	{
 		email.sendKeys(Email);
@@ -75,25 +79,30 @@ public class RegistrationPage
 	{
 		password.sendKeys(Pwd);
 	}
+	//set the password
 	public void ConfirmPassword(String Cpwd)
 	{
 		reenterpassword.sendKeys(Cpwd);
 	
 	}
+	//clicked privacy button
 	public void ClickPrivacy()
 	{
 		privacystatement.click();
 	}
+	//clicked terms and conditions button
 	public void Clickterms()
 	{
 		termsconditions.click();
 		
 	}
+	//clicked Register button
 	public void ClickRegister() 
 	{
 		register.click();
 		
 	}
+	//Validating the Registration confirmation message
 	public  void assertRegStatus(String expected) throws InterruptedException 
 	{
 		GenericUtils.explcitWait(ldriver, regstatus, "vis", 60);
