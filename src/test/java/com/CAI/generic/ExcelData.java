@@ -15,37 +15,38 @@ import org.openxmlformats.schemas.drawingml.x2006.chart.impl.STRadarStyleImpl;
 
 public class ExcelData
 {
-	public static XSSFWorkbook wb;
-	public static  FileInputStream fi;
-	public static XSSFSheet sheet;
+	//public static XSSFWorkbook wb;
+	//public static  FileInputStream fi;
+	//public static XSSFSheet sheet;
 	
 	//Method used to read the data from the excel file.
-public static String getData(String path,int rowno,int columnno) throws IOException 
+public static String getData(String path,int rowno,int columnno,String sheet) throws IOException 
 {
-	fi = new FileInputStream(path);
-	wb = new XSSFWorkbook(fi);
-	Cell cell = wb.getSheet("sheet1").getRow(rowno).getCell(columnno);
+	FileInputStream fi = new FileInputStream(path);
+	XSSFWorkbook wb = new XSSFWorkbook(fi);
+	Cell cell = wb.getSheet(sheet).getRow(rowno).getCell(columnno);
 	DataFormatter  df = new DataFormatter();
 	String data = df.formatCellValue(cell);
+	wb.close();
 	return data;
 	
 }
 	//Method used to get the row size
-public static int getRowSize(String path) throws IOException
+public static int getRowSize(String path,String sheet) throws IOException
 {
-	fi = new FileInputStream(path); 
-	wb = new XSSFWorkbook(fi);
-	int rowsize = wb.getSheet("sheet1").getLastRowNum();
+	FileInputStream fi = new FileInputStream(path); 
+	XSSFWorkbook wb = new XSSFWorkbook(fi);
+	int rowsize = wb.getSheet(sheet).getLastRowNum();
 	return rowsize;
 	
 }
 
 	//Method used to get the column size
-public static int columnSize(String path,int rowno) throws Exception
+public static int columnSize(String path,int rowno,String sheet) throws Exception
 {
-	fi = new FileInputStream(path); 
-	wb = new XSSFWorkbook(fi);
-	int colsize = wb.getSheet("sheet1").getRow(rowno).getLastCellNum();
+	FileInputStream fi = new FileInputStream(path); 
+	XSSFWorkbook wb = new XSSFWorkbook(fi);
+	int colsize = wb.getSheet(sheet).getRow(rowno).getLastCellNum();
 	return colsize;
 
 }

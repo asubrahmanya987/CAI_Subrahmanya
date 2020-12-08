@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-05T19:01:35Z" name="Default suite" finished-at="2020-12-05T19:03:38Z" duration-ms="122468">
+  <suite name="CAI_Tests" duration-ms="154706" started-at="2020-12-08T18:43:29Z" finished-at="2020-12-08T18:46:03Z">
     <groups>
     </groups>
-    <test started-at="2020-12-05T19:01:35Z" name="Default test" finished-at="2020-12-05T19:03:38Z" duration-ms="122468">
-      <class name="com.CAI.tests.RegistrationTest">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:31:35Z" name="startReport" finished-at="2020-12-06T00:31:39Z" duration-ms="3346" status="PASS">
+    <test name="CAI_RegistrationTest" duration-ms="154706" started-at="2020-12-08T18:43:29Z" finished-at="2020-12-08T18:46:03Z">
+      <class name="com.CAI.tests.RegistrationNegativeTest">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@43bd930a]" name="startReport" is-config="true" duration-ms="1863" started-at="2020-12-08T18:43:29Z" finished-at="2020-12-08T18:43:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:31:51Z" name="openBrowser" finished-at="2020-12-06T00:32:22Z" duration-ms="31209" status="PASS">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@43bd930a]" name="openBrowser" is-config="true" duration-ms="56762" started-at="2020-12-08T18:43:40Z" finished-at="2020-12-08T18:44:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="registration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:32:22Z" name="registration" data-provider="regdata" finished-at="2020-12-06T00:32:43Z" duration-ms="20682" status="PASS">
+        <test-method status="PASS" signature="registrationNegativeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@43bd930a]" name="registrationNegativeTest" duration-ms="80510" started-at="2020-12-08T18:44:36Z" data-provider="regdatanegative" finished-at="2020-12-08T18:45:57Z">
           <params>
             <param index="0">
               <value>
@@ -24,7 +24,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[A]]>
+                <![CDATA[a]]>
               </value>
             </param>
             <param index="2">
@@ -34,66 +34,27 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Start123@]]>
+                <![CDATA[1234]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[Start123@]]>
+                <![CDATA[1234]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registration -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:32:43Z" name="closeBrowser" finished-at="2020-12-06T00:32:44Z" duration-ms="1187" status="PASS">
+        </test-method> <!-- registrationNegativeTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@43bd930a]" name="closeBrowser" is-config="true" duration-ms="1026" started-at="2020-12-08T18:45:57Z" finished-at="2020-12-08T18:45:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:32:44Z" name="openBrowser" finished-at="2020-12-06T00:33:17Z" duration-ms="33481" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="registration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:33:17Z" name="registration" data-provider="regdata" finished-at="2020-12-06T00:33:33Z" duration-ms="15943" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Abc]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[d]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Abcd@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Abcd@123]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Abcd@123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registration -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:33:33Z" name="closeBrowser" finished-at="2020-12-06T00:33:35Z" duration-ms="1143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="endreport()[pri:0, instance:com.CAI.tests.RegistrationTest@424e1977]" started-at="2020-12-06T00:33:35Z" name="endreport" finished-at="2020-12-06T00:33:38Z" duration-ms="3277" status="PASS">
+        <test-method status="PASS" signature="endreport()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@43bd930a]" name="endreport" is-config="true" duration-ms="5396" started-at="2020-12-08T18:45:58Z" finished-at="2020-12-08T18:46:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endreport -->
-      </class> <!-- com.CAI.tests.RegistrationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.CAI.tests.RegistrationNegativeTest -->
+    </test> <!-- CAI_RegistrationTest -->
+  </suite> <!-- CAI_Tests -->
 </testng-results>
