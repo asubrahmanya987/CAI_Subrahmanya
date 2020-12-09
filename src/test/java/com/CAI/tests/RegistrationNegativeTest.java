@@ -1,19 +1,15 @@
 package com.CAI.tests;
 
-import java.io.IOException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.CAI.generic.AutoConstant;
 import com.CAI.generic.BaseTest;
 import com.CAI.generic.ExcelData;
 import com.CAI.generic.ListenerTest;
 import com.CAI.pages.RegNegPage;
-import com.CAI.pages.RegistrationPage;
+
 import com.relevantcodes.extentreports.LogStatus;
 @Listeners(ListenerTest.class)
 public class RegistrationNegativeTest extends BaseTest implements AutoConstant
@@ -59,8 +55,8 @@ public class RegistrationNegativeTest extends BaseTest implements AutoConstant
 		@DataProvider(name="regdatanegative")
 		public String[][] getRegData() throws Exception
 		{
-			int rs=ExcelData.getRowSize(negregpath,"sheet1");
-			int cs = ExcelData.columnSize(negregpath, 1,"sheet1");
+			int rs=ExcelData.getRowSize(regNegPath,"sheet1");
+			int cs = ExcelData.columnSize(regNegPath, 1,"sheet1");
 			System.out.println(rs+"\n"+cs);
 			
 			
@@ -70,7 +66,7 @@ public class RegistrationNegativeTest extends BaseTest implements AutoConstant
 			{
 				for(int j=0;j<cs;j++)
 				{
-				reg[i-1][j]=ExcelData.getData(negregpath, i, j,"sheet1");
+				reg[i-1][j]=ExcelData.getData(regNegPath, i, j,"sheet1");
 				}
 			}
 			return reg;

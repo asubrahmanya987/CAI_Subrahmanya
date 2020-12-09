@@ -2,15 +2,11 @@ package com.CAI.generic;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.FileHandler;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.apache.commons.*;
-import org.apache.commons.compress.compressors.FileNameUtil;
 public class ListenerTest extends BaseTest implements ITestListener 
 {
 
@@ -33,8 +29,10 @@ public class ListenerTest extends BaseTest implements ITestListener
 	{
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("C:\\Users\\Sa\\Desktop\\CAI_testing\\CAI_Subrahmanya\\Screenshots\\test.png");
+		
+		File dest = new File(screenshot_Path);
 		try {
+			
 			org.openqa.selenium.io.FileHandler.copy(src,dest);
 		} catch (IOException e) {
 			

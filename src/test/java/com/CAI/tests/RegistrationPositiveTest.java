@@ -1,12 +1,8 @@
 package com.CAI.tests;
 
-import java.io.IOException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.CAI.generic.AutoConstant;
 import com.CAI.generic.BaseTest;
 import com.CAI.generic.ExcelData;
@@ -59,8 +55,8 @@ public class RegistrationPositiveTest extends BaseTest implements AutoConstant
 		@DataProvider(name="regdata")
 		public String[][] getRegData() throws Exception
 		{
-			int rs=ExcelData.getRowSize(path,"sheet1");
-			int cs = ExcelData.columnSize(path, 1,"sheet1");
+			int rs=ExcelData.getRowSize(regPospath,"sheet1");
+			int cs = ExcelData.columnSize(regPospath, 1,"sheet1");
 			System.out.println(rs+"\n"+cs);
 			
 			String[][] reg=new String[rs][cs];
@@ -69,7 +65,7 @@ public class RegistrationPositiveTest extends BaseTest implements AutoConstant
 			{
 				for(int j=0;j<cs;j++)
 				{
-				reg[i-1][j]=ExcelData.getData(path, i, j,"sheet1");
+				reg[i-1][j]=ExcelData.getData(regPospath, i, j,"sheet1");
 				}
 			}
 			return reg;

@@ -9,10 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">CAI_Tests</th></tr>
-<tr><td><a href="#t0">CAI_RegistrationTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">154,706</td><td></td><td></td></tr>
+<tr><td><a href="#t0">CAI_RegistrationTest</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">73,294</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CAI_Tests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">CAI_RegistrationTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.CAI.tests.RegistrationNegativeTest</td><td><a href="#m0">registrationNegativeTest</a></td><td rowspan="1">1607453076791</td><td rowspan="1">80510</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CAI_Tests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">CAI_RegistrationTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.CAI.tests.RegistrationNegativeTest</td><td><a href="#m0">registrationNegativeTest</a></td><td rowspan="1">1607511167202</td><td rowspan="1">62517</td></tr></tbody>
 </table>
-<h2>CAI_RegistrationTest</h2><h3 id="m0">com.CAI.tests.RegistrationNegativeTest#registrationNegativeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>subbu</td><td>a</td><td>subbu@gmail.com</td><td>1234</td><td>1234</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CAI_RegistrationTest</h2><h3 id="m0">com.CAI.tests.RegistrationNegativeTest#registrationNegativeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>subbu</td><td>a</td><td>subbu@gmail.com</td><td>1234</td><td>1234</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //h1[text()=&apos;Thank you for registering with SAP Conversational AI&apos;] (tried for 60 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;WDFV41001201D&apos;, ip: &apos;10.76.107.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=C:\Users\C5309831\AppData\Local\Temp\scoped_dir23544_1986316558}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55826}, acceptInsecureCerts=false, browserVersion=87.0.4280.88, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 65d48a51ea768ed1beef102b940ecb10
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at com.CAI.generic.GenericUtils.explcitWait(GenericUtils.java:36)
+	at com.CAI.pages.RegNegPage.assertRegStatus(RegNegPage.java:109)
+	at com.CAI.tests.RegistrationNegativeTest.registrationNegativeTest(RegistrationNegativeTest.java:47)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
