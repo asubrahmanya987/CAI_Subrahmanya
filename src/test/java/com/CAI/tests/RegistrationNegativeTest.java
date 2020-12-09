@@ -8,8 +8,7 @@ import com.CAI.generic.AutoConstant;
 import com.CAI.generic.BaseTest;
 import com.CAI.generic.ExcelData;
 import com.CAI.generic.ListenerTest;
-import com.CAI.pages.RegNegPage;
-
+import com.CAI.pages.RegistrationPage;
 import com.relevantcodes.extentreports.LogStatus;
 @Listeners(ListenerTest.class)
 public class RegistrationNegativeTest extends BaseTest implements AutoConstant
@@ -21,11 +20,13 @@ public class RegistrationNegativeTest extends BaseTest implements AutoConstant
 	public void registrationNegativeTest(String fn,String ln,String email,String pwd,String repwd) throws InterruptedException
 	{
 		
-		
+		try
+		{
 			
 			//RegistrationPage rp = new RegistrationPage(driver);
 			
-			RegNegPage rp=new RegNegPage(driver);
+			RegistrationPage rp=new RegistrationPage(driver);
+			etest = reports.startTest("RegistrationNegativeTest");
 			rp.Registrationclick();
 			etest.log(LogStatus.PASS, "Clicked Sigh up button");
 			rp.EnterFirstname(fn);
@@ -47,7 +48,11 @@ public class RegistrationNegativeTest extends BaseTest implements AutoConstant
 			rp.assertRegStatus(exp);
 			etest.log(LogStatus.PASS, "Registered successfully");
 			
-		
+		}
+		catch(Exception e)
+		{
+			etest.log(LogStatus.FAIL, e.getMessage());
+		}
 
 			
 	}

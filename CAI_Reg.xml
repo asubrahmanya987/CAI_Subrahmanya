@@ -10,7 +10,7 @@
 <test name="CAI_RegistrationTest" >
 <parameter name="browser" value="chrome"/>
 <classes>
-<!--    <class name="com.CAI.tests.RegistrationPositiveTest"/> -->
+<class name="com.CAI.tests.RegistrationPositiveTest"/>
  <class name="com.CAI.tests.RegistrationNegativeTest"/> 
 
 </classes>

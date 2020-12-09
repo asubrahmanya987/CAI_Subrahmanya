@@ -21,7 +21,7 @@ public class RegistrationPositiveTest extends BaseTest implements AutoConstant
 			
 			RegistrationPage rp = new RegistrationPage(driver);
 			
-			
+			etest = reports.startTest("RegistrationPositiveTest");	
 			rp.Registrationclick();
 			etest.log(LogStatus.PASS, "Clicked Sigh up button");
 			rp.EnterFirstname(fn);

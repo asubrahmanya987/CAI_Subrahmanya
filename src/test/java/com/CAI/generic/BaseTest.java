@@ -12,12 +12,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.model.ITest;
 
 public class BaseTest implements AutoConstant
 {
@@ -30,8 +33,8 @@ public class BaseTest implements AutoConstant
 	@BeforeClass
 	public void startReport()
 	{
-		reports =	new ExtentReports(extentReport_Path);
-		etest = reports.startTest("RegTests");		
+		reports =	new ExtentReports(extentReport_Path,false);
+			
 	}
 	
 	//Launching the browser and maximize the window

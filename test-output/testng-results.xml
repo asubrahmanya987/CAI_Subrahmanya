@@ -1,21 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-09T10:52:37Z" name="CAI_Tests" finished-at="2020-12-09T10:53:51Z" duration-ms="73294">
+  <suite name="CAI_Tests" duration-ms="212970" started-at="2020-12-09T20:17:31Z" finished-at="2020-12-09T20:21:04Z">
     <groups>
     </groups>
-    <test started-at="2020-12-09T10:52:37Z" name="CAI_RegistrationTest" finished-at="2020-12-09T10:53:51Z" duration-ms="73294">
-      <class name="com.CAI.tests.RegistrationNegativeTest">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@3e58a80e]" started-at="2020-12-09T10:52:37Z" name="startReport" finished-at="2020-12-09T10:52:38Z" duration-ms="339" status="PASS">
+    <test name="CAI_RegistrationTest" duration-ms="212970" started-at="2020-12-09T20:17:31Z" finished-at="2020-12-09T20:21:04Z">
+      <class name="com.CAI.tests.RegistrationPositiveTest">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.CAI.tests.RegistrationPositiveTest@5891e32e]" name="startReport" is-config="true" duration-ms="1683" started-at="2020-12-09T20:17:31Z" finished-at="2020-12-09T20:17:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@3e58a80e]" started-at="2020-12-09T10:52:39Z" name="openBrowser" finished-at="2020-12-09T10:52:47Z" duration-ms="7731" status="PASS">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationPositiveTest@5891e32e]" name="openBrowser" is-config="true" duration-ms="45513" started-at="2020-12-09T20:17:41Z" finished-at="2020-12-09T20:18:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="registrationNegativeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@3e58a80e]" started-at="2020-12-09T10:52:47Z" name="registrationNegativeTest" data-provider="regdatanegative" finished-at="2020-12-09T10:53:49Z" duration-ms="62517" status="FAIL">
+        <test-method status="PASS" signature="registrationPositiveTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationPositiveTest@5891e32e]" name="registrationPositiveTest" duration-ms="20935" started-at="2020-12-09T20:18:26Z" data-provider="regdata" finished-at="2020-12-09T20:18:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[subbu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[subbu@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Start123@]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Start123@]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationPositiveTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.CAI.tests.RegistrationPositiveTest@5891e32e]" name="closeBrowser" is-config="true" duration-ms="2971" started-at="2020-12-09T20:18:47Z" finished-at="2020-12-09T20:18:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="endreport()[pri:0, instance:com.CAI.tests.RegistrationPositiveTest@5891e32e]" name="endreport" is-config="true" duration-ms="6861" started-at="2020-12-09T20:18:50Z" finished-at="2020-12-09T20:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endreport -->
+      </class> <!-- com.CAI.tests.RegistrationPositiveTest -->
+      <class name="com.CAI.tests.RegistrationNegativeTest">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@cb0ed20]" name="startReport" is-config="true" duration-ms="3037" started-at="2020-12-09T20:18:57Z" finished-at="2020-12-09T20:19:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@cb0ed20]" name="openBrowser" is-config="true" duration-ms="39400" started-at="2020-12-09T20:19:05Z" finished-at="2020-12-09T20:19:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="registrationNegativeTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@cb0ed20]" name="registrationNegativeTest" duration-ms="77325" started-at="2020-12-09T20:19:45Z" data-provider="regdatanegative" finished-at="2020-12-09T20:21:02Z">
           <params>
             <param index="0">
               <value>
@@ -43,63 +106,14 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of all elements located by By.xpath: //h1[text()='Thank you for registering with SAP Conversational AI'] (tried for 60 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'WDFV41001201D', ip: '10.76.107.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=C:\Users\C5309831\AppData\Local\Temp\scoped_dir23544_1986316558}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55826}, acceptInsecureCerts=false, browserVersion=87.0.4280.88, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 65d48a51ea768ed1beef102b940ecb10]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //h1[text()='Thank you for registering with SAP Conversational AI'] (tried for 60 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'WDFV41001201D', ip: '10.76.107.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=C:\Users\C5309831\AppData\Local\Temp\scoped_dir23544_1986316558}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55826}, acceptInsecureCerts=false, browserVersion=87.0.4280.88, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 65d48a51ea768ed1beef102b940ecb10
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-at com.CAI.generic.GenericUtils.explcitWait(GenericUtils.java:36)
-at com.CAI.pages.RegNegPage.assertRegStatus(RegNegPage.java:109)
-at com.CAI.tests.RegistrationNegativeTest.registrationNegativeTest(RegistrationNegativeTest.java:47)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationNegativeTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@3e58a80e]" started-at="2020-12-09T10:53:50Z" name="closeBrowser" finished-at="2020-12-09T10:53:50Z" duration-ms="246" status="PASS">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@cb0ed20]" name="closeBrowser" is-config="true" duration-ms="866" started-at="2020-12-09T20:21:02Z" finished-at="2020-12-09T20:21:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="endreport()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@3e58a80e]" started-at="2020-12-09T10:53:50Z" name="endreport" finished-at="2020-12-09T10:53:51Z" duration-ms="369" status="PASS">
+        <test-method status="PASS" signature="endreport()[pri:0, instance:com.CAI.tests.RegistrationNegativeTest@cb0ed20]" name="endreport" is-config="true" duration-ms="627" started-at="2020-12-09T20:21:03Z" finished-at="2020-12-09T20:21:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endreport -->
